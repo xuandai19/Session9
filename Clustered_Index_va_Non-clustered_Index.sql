@@ -11,6 +11,8 @@ VALUES (101, 50.50, 5),
        (101, 35.00, 3),
        (102, 23.40, 4);
 
+CREATE INDEX idx_product_category ON products(category_id);
+
 CLUSTER products USING idx_product_category;
 
 CREATE INDEX idx_prodcut_price ON products(price);
